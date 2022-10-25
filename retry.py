@@ -2,7 +2,17 @@ import random
 import tkinter as Tk
 import quotes
 import keyboard
-keyboard.add_hotkey("e", lambda: printquote())
+try:
+    f = open("hotkey.txt", "r")
+except:
+    print('choose a hotkey')
+    g = input()
+    ddd = open("hotkey.txt", "x")
+    h = open("hotkey.txt", "w")
+    h.write(g)
+    f = open("hotkey.txt", "r")
+hotkey = f.read()
+keyboard.add_hotkey(f, lambda: printquote())
 technobladequote = random.choice(quotes.quoter)
 def printquote():
     ggg = len(technobladequote)
