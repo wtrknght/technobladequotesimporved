@@ -12,7 +12,18 @@ except:
     h.write(g)
     f = open("hotkey.txt", "r")
 hotkey = f.read()
+try:
+    ff = open("quitkey.txt", "r")
+except:
+    print('choose a quitkey')
+    gg = input()
+    dddd = open("quitkey.txt", "x")
+    hh = open("quitkey.txt", "w")
+    hh.write(gg)
+    ff = open("quitkey.txt", "r")
+quitkey = ff.read()
 keyboard.add_hotkey(f, lambda: printquote())
+keyboard.add_hotkey(f, lambda: quit())
 technobladequote = random.choice(quotes.quoter)
 def printquote():
     ggg = len(technobladequote)
