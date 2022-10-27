@@ -23,7 +23,7 @@ except:
     ff = open("quitkey.txt", "r")
 quitkey = ff.read()
 keyboard.add_hotkey(f, lambda: printquote())
-keyboard.add_hotkey(f, lambda: quit())
+keyboard.add_hotkey(ff, lambda: quit())
 technobladequote = random.choice(quotes.quoter)
 def printquote():
     ggg = len(technobladequote)
