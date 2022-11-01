@@ -1,6 +1,7 @@
 import random
 import tkinter as Tk
 import quotes
+import sys
 import keyboard
 try:
     f = open("hotkey.txt", "r")
@@ -23,7 +24,7 @@ except:
     ff = open("quitkey.txt", "r")
 quitkey = ff.read()
 keyboard.add_hotkey(f, lambda: printquote())
-keyboard.add_hotkey(ff, lambda: quit())
+keyboard.add_hotkey(ff, lambda: sys.exit())
 technobladequote = random.choice(quotes.quoter)
 def printquote():
     ggg = len(technobladequote)
