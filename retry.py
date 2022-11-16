@@ -32,5 +32,4 @@ def printquote():
         label.pack()
         label.mainloop()
 keyboard.add_hotkey(f, printquote())
-keyboard.add_hotkey(ff, sys.exit())
-
+keyboard.wait(ff)
