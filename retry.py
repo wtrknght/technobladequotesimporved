@@ -27,15 +27,14 @@ keyboard.add_hotkey(f, lambda: printquote())
 keyboard.add_hotkey(ff, lambda: sys.exit())
 technobladequote = random.choice(quotes.quoter)
 def printquote():
-    ggg = len(technobladequote)
-    match ggg:
-    case 30 => ggg:
-         iflong = 12
-    case 1000 => ggg:
-         iflong = 3
-    case _:
-         iflong = 18
-    label = Tk.Label(None, text=technobladequote, font=('Times', iflong),fg='black')
-    label.pack()
-    label.mainloop()
-printquote()
+        ggg = len(technobladequote)
+        if ggg >= 100:
+            iflong = 12
+        elif ggg <= 100:
+            iflong = 3
+        else:
+            iflong = 18
+        label = Tk.Label(None, text = technobladequote, font = ('Times', iflong),fg = 'black')
+        label.pack()
+        label.mainloop()
+
