@@ -31,5 +31,5 @@ def printquote():
         label = Tk.Label(None, text = technobladequote, font = ('Times', iflong),fg = 'black')
         label.pack()
         label.mainloop()
-keyboard.add_hotkey(f, printquote())
-keyboard.wait(ff)
+keyboard.add_hotkey(f, printquote, args = ())
+keyboard.add_hotkey(f, quit, args = ())
