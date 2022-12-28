@@ -1,20 +1,19 @@
 import keyboard
-try:
+import os
+if 'hotkey.txt' in os.listdir():
     f = open("hotkey.txt", "r")
-except:
+else:
     print('choose a hotkey')
     g = input()
-    ddd = open("hotkey.txt", "x")
     h = open("hotkey.txt", "w")
     h.write(g)
     f = open("hotkey.txt", "r")
 hotkey = f.read()
-try:
+if 'quitkey.txt' in os.listdir():
     ff = open("quitkey.txt", "r")
-except:
+else:
     print('choose a quitkey')
     gg = input()
-    dddd = open("quitkey.txt", "x")
     hh = open("quitkey.txt", "w")
     hh.write(gg)
     ff = open("quitkey.txt", "r")
@@ -32,4 +31,4 @@ def printquote():
         label.pack()
         label.mainloop()
 keyboard.add_hotkey(f, printquote, args = ())
-keyboard.add_hotkey(f, quit, args = ())
+keyboard.wait(quitkey)
