@@ -3,6 +3,10 @@ This is an imporoved version. - Wyatt Kinard
 todo
 - compile for all osses? osi? os
 - add to a repo
+- c version
+- - c version for linux
+- c version universally compatible
+- make it play doom
 dependencies
 - tkinter
 - python
